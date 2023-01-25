@@ -1,0 +1,110 @@
+import NextAuth, { NextAuthOptions } from "next-auth";
+import CredentialsProvider from "next-auth/providers/credentials";
+import { NextApiHandler } from "next/types";
+import {
+	requestToken,
+	logout,
+	requestIntrospect,
+} from "../../../helpers/keycloak.helper";
+import { redirect } from "next/navigation";
+import { requestNewToken } from "../../../helpers/keycloak.helper";
+
+export const authOptions: NextAuthOptions = {
+	providers: [
+		CredentialsProvider({
+			name: "Credentials",
+			type: "credentials",
+			credentials: {
+				username: {
+					label: "Username",
+					type: "text",
+					value: "user1",
+					placeholder: "jsmith",
+				},
+				password: {
+					label: "Password",
+					type: "password",
+					value: "user1",
+				},
+			},
+			async authorize(credentials) {
+				const token = await requestToken(
+					String(credentials?.username),
+					String(credentials?.password)
+				);
+
+				if (token.error) return null;
+				const userinfo = await requestIntrospect(
+					String(token.access_token)
+				);
+
+				return { ...userinfo, token: token };
+			},
+		}),
+	],
+	events: {
+		async signOut({ token }) {
+			await logout(token);
+			redirect("google.com");
+		},
+	},
+	callbacks: {
+		// Getting the JWT token from API response
+		async jwt({ token, user }) {
+			if (user) {
+				console.log("----------jwt/user-----------");
+				console.log(user);
+				return {
+					...token,
+					iat: user.iat,
+					exp: user.exp,
+					jti: user.jti,
+					accessToken: String(user.token?.access_token),
+					refreshToken: String(user.token?.refresh_token),
+					accessTokenExpired:
+						Date.now() +
+						(Number(user.token?.expires_in) - 15) * 1000,
+					refreshTokenExpired:
+						Date.now() +
+						(Number(user.token?.refresh_expires_in) - 15) * 1000,
+					user: { ...user, token: undefined },
+				};
+			}
+			const newToken = await requestNewToken(token);
+			return newToken;
+		},
+
+		async session({ session, token }) {
+			if (token) {
+				// console.log("-------session/token-------");
+				// console.log(token);
+
+				return {
+					...session,
+					user: token.user,
+					accessToken: token.accessToken,
+					refreshToken: token.refreshToken,
+					error: token.error,
+				};
+				// session.accessToken = token.accessToken;
+				// session.refreshToken = token.refreshToken;
+				// session.error = token.error;
+				// session.expires = new Date(
+				// 	token.refreshTokenExpired
+				// ).toISOString();
+			}
+			return session;
+		},
+	},
+	secret: String(process.env.NEXTAUTH_SECRET),
+	debug: true,
+	session: {
+		strategy: "jwt",
+	},
+};
+
+const AuthHandler: NextApiHandler = async (req, res) => {
+	return await NextAuth(req, res, authOptions);
+};
+
+export default AuthHandler;
