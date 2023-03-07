@@ -1,63 +1,52 @@
-import { NextApiHandler } from "next";
+import { NextAuthOptions } from "next-auth";
 import NextAuth from "next-auth";
-import { NextAuthOptions } from "next-auth/index";
-import KeycloackProvider from "next-auth/providers/keycloak";
 import { requestNewToken } from "../../../helpers/keycloak.helper";
 
 export const authOptions: NextAuthOptions = {
-	secret: process.env.NEXTAUTH_SECRET,
+	secret: String(process.env.NEXTAUTH_SECRET),
+	//next-auth OAuth Provider config
 	providers: [
-		KeycloackProvider({
+		{
+			id: "keycloak",
+			name: "Keycloak",
+			type: "oauth",
+			wellKnown: process.env.KEYCLOAK_WELLKNOWN,
+			idToken: true,
+			checks: ["pkce", "state"],
+			issuer: process.env.KEYCLOAK_ISSUER,
 			clientId: String(process.env.KEYCLOAK_ID),
 			clientSecret: String(process.env.KEYCLOAK_SECRET),
-			issuer: String(process.env.KEYCLOAK_ISSUER),
-		}),
+			authorization: process.env.KEYCLOAK_AUTHORIZATION,
+			token: process.env.KEYCLOAK_TOKEN,
+			userinfo: process.env.KEYCLOAK_USERINFO,
+			profile(profile) {
+				return { ...profile, id: profile.sid };
+			},
+		},
 	],
-	session: {
-		strategy: "jwt",
-	},
-	jwt: {},
+	debug: true,
 	callbacks: {
-		async jwt({ token, user, account }) {
-			// console.log(account);
-			if (account && user) {
+		async jwt({ token, account, profile }) {
+			if (profile && account) {
 				return {
-					accessToken: account.access_token,
-					accessTokenExpired: Number(account.expires_at) * 1000,
-					refreshToken: account.refresh_token,
-					refreshTokenExpired:
-						Date.now() + Number(account.refresh_expires_in) * 1000,
-					user,
+					...token,
+					account: account,
+					profile: profile,
+					error: false,
 				};
 			}
-
-			if (Date.now() < Number(token.accessTokenExpired)) {
-				return token;
-			}
-
-			token = await requestNewToken(token);
+			return await requestNewToken(token);
 			return token;
 		},
-
 		async session({ session, token }) {
 			if (token) {
-				return {
-					...session,
-					accessToken: token.accessToken,
-					refreshToken: token.refreshToken,
-					accessTokenExpired: token.accessTokenExpired,
-					refreshTokenExpired: token.refreshTokenExpired,
-					error: token?.error,
-				};
-			}
+				// console.log(token);
 
+				return { ...session, token: token };
+			}
 			return session;
 		},
 	},
 };
 
-const AuthHandler: NextApiHandler = async (req, res) => {
-	return await NextAuth(req, res, authOptions);
-};
-
-export default AuthHandler;
+export default NextAuth(authOptions);

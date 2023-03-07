@@ -1,10 +1,11 @@
 "use client";
 import { Session } from "next-auth";
 import { useSession, signIn, signOut } from "next-auth/react";
+import { MyToken } from "../helpers/keycloak.helper";
 import { IChildrenNode } from "./layout";
 
 interface ICusSess extends Session {
-	error?: boolean;
+	token?: MyToken;
 }
 
 const SessClientHandler = ({ children }: IChildrenNode) => {
@@ -13,7 +14,10 @@ const SessClientHandler = ({ children }: IChildrenNode) => {
 	if (session.status === "loading") return <>Waiting for data...</>;
 	if (session.status === "unauthenticated") signIn();
 	const cusSession: ICusSess | null = session.data;
-	if (cusSession?.error) signOut();
+	// console.log(cusSession);
+
+	// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+	if (cusSession?.token!.error) signOut();
 	return <>{children}</>;
 };
 

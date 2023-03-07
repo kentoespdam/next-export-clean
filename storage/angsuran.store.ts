@@ -4,6 +4,7 @@ import {
 	IAngsuranRequest,
 } from "../components/angsuran/angsuran.column";
 import { IPages } from "../helpers/common.interface";
+
 interface IAngsuranStore {
 	isLoading: boolean;
 	angRequest: IAngsuranRequest;

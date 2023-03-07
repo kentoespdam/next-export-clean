@@ -9,7 +9,6 @@ const IkhtisarTahunanComponent = () => {
 		<SessClientHandler>
 			<Box>
 				<IkhtisarTahunanFilter />
-
 				<IkhtisarTahunanTabComponent />
 			</Box>
 		</SessClientHandler>

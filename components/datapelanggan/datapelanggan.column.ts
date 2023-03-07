@@ -1,12 +1,34 @@
-import { GridColDef } from "@mui/x-data-grid/models";
+import { GridColDef } from "@mui/x-data-grid";
+import { IPageRequest } from "../../helpers/common.interface";
+
+export interface IDataPelanggan {
+	noreg: string;
+	wil: string;
+	nosamw: string;
+	nama: string;
+	alamat: string;
+	rt: string;
+	rw: string;
+	desa: string;
+	kecamatan: string;
+	jlw: string;
+	urjlwp: string;
+	statSmb: string;
+	urstatSmb: string;
+	tglPas: string;
+}
+
+export type IDataPelangganRequest = {
+	noreg?: string;
+	nosamw?: string;
+	nama?: string;
+	alamat?: string;
+	tglPasang?: string;
+	kodeGolongan?: string;
+	statusSambung?: string;
+} & IPageRequest;
 
 export const DataPelangganColumn: GridColDef[] = [
-	{
-		field: "noreg",
-		headerName: "No Registrasi",
-		filterable: false,
-		sortable: false,
-	},
 	{
 		field: "wil",
 		headerName: "kode wilayah",

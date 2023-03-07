@@ -1,3 +1,4 @@
+import { Account } from "next-auth";
 import { JWT } from "next-auth/jwt";
 
 export async function requestToken(username: string, password: string) {
@@ -63,14 +64,22 @@ export const requestIntrospect = async (accessToken: string) => {
 	return result;
 };
 
-export const requestNewToken = async (payload: Record<string, unknown>) => {
+export interface MyToken extends JWT {
+	account: Account;
+}
+export const requestNewToken = async (payload: JWT) => {
 	console.log("refresh executed?");
+	const p = payload as MyToken;
+
+	if (Date.now() < Number(p.account.expires_at))
+		return { ...payload, error: false };
+
 	const url = String(process.env.KEYCLOAK_TOKEN);
 	const details = {
 		client_id: String(process.env.KEYCLOAK_ID),
 		client_secret: String(process.env.KEYCLOAK_SECRET),
 		grant_type: "refresh_token",
-		refresh_token: payload.refreshToken,
+		refresh_token: p.account.refresh_token,
 	};
 	const formBody: string[] = [];
 	Object.entries(details).forEach(([key, value]: [string, unknown]) => {
