@@ -1,7 +1,7 @@
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { useIkhtisarTabStore } from "../../../../storage/billing.tab.store";
+import { useIkhtisarTabStore } from "@storage/billing.tab.store";
 
 const IkhtisarHead = () => {
 	const tabIndex = useIkhtisarTabStore((state) => state.tabIndex);

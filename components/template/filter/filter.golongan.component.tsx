@@ -6,7 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Tooltip from "@mui/material/Tooltip";
-import { golonganList } from "../../../service/golongan";
+import { golonganList } from "@service/golongan";
 
 interface IFilterGolonganComponent {
 	searchValue: unknown;

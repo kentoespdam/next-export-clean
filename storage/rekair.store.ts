@@ -1,5 +1,5 @@
 import { IRekair, IRekairRequest } from "../components/rekair/rekair.column";
-import { IPages } from "../helpers/common.interface";
+import { IPages } from "@helpers/common.interface";
 import create from "zustand";
 
 interface IRekairStore {

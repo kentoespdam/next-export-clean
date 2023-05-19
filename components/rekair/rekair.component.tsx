@@ -2,7 +2,7 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { DataGrid } from "@mui/x-data-grid/DataGrid";
-import SessClientHandler from "../../app/SessClientHandler";
+import SessClientHandler from "@app/SessClientHandler";
 import { useRekairStore } from "../../storage/rekair.store";
 import { RekairColumn } from "./rekair.column";
 import RekairToolbar from "./rekair.toolbar";

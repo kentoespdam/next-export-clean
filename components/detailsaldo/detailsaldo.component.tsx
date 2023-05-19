@@ -2,7 +2,7 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { DataGrid } from "@mui/x-data-grid/DataGrid";
-import SessClientHandler from "../../app/SessClientHandler";
+import SessClientHandler from "@app/SessClientHandler";
 import { useDetailSaldoStore } from "../../storage/detailsaldo.store";
 import { DetailSaldoColumn, IDetailSaldo } from "./detailsaldo.column";
 import DetailSaldoFooter from "./detailsaldo.footer";

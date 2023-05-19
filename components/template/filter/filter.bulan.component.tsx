@@ -6,7 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import Tooltip from "@mui/material/Tooltip";
-import { bulanList } from "../../../service/bulan.list";
+import { bulanList } from "@service/bulan.list";
 
 interface IFilterBulanComponent {
 	searchValue: unknown;

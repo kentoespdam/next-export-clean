@@ -1,11 +1,11 @@
 import TableCell from "@mui/material/TableCell";
 import TableFooter from "@mui/material/TableFooter";
 import TableRow from "@mui/material/TableRow";
-import { useBillingStore } from "../../../../../storage/billing.store";
-import { useLainnyaJenisLaporanStore } from "../../../../../storage/billing.tab.store";
-import { golonganList } from "../../../../../service/golongan";
+import { useBillingStore } from "@storage/billing.store";
+import { useLainnyaJenisLaporanStore } from "@storage/billing.tab.store";
+import { golonganList } from "@service/golongan";
 import { IGolonganData } from "../../../interface/golongan.data";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 
 const reduceTotalGolonganData = (
 	rows: IGolonganData[],

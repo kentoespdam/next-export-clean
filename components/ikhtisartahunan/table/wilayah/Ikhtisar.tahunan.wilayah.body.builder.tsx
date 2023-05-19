@@ -1,10 +1,10 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../helpers/object.formatter";
-import { bulanList } from "../../../../service/bulan.list";
-import { ICabang } from "../../../../service/cabang";
-import { useIkhtisarTahunanStore } from "../../../../storage/ikhtisar.tahunan.store";
-import { useIkhtisarTahunanLaporanStore } from "../../../../storage/ikhtisar.tahunan.tab.store";
+import { convertToRupiah } from "@helpers/object.formatter";
+import { bulanList } from "@service/bulan.list";
+import { ICabang } from "@service/cabang";
+import { useIkhtisarTahunanStore } from "@storage/ikhtisar.tahunan.store";
+import { useIkhtisarTahunanLaporanStore } from "@storage/ikhtisar.tahunan.tab.store";
 import {
     IIkhtisarPerTahun,
     IIkhtisarSatkerData

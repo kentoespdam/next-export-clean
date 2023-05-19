@@ -1,7 +1,7 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import TableContainer from "@mui/material/TableContainer";
-import { useLainnyaStore } from "../../../../storage/billing.tab.store";
+import { useLainnyaStore } from "@storage/billing.tab.store";
 import LainnyaDiameterComponent from "./diameter/lainnya.diameter.component";
 import LainnyaJenisLaporan from "./lainnya.jenis.laporan";
 import LainnyaWilayahComponent from "./wilayah/lainnya.wilayah.component";

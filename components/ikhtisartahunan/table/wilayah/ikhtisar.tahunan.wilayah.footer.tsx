@@ -1,10 +1,10 @@
 import TableCell from "@mui/material/TableCell";
 import TableFooter from "@mui/material/TableFooter";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../helpers/object.formatter";
-import { bulanList } from "../../../../service/bulan.list";
-import { useIkhtisarTahunanStore } from "../../../../storage/ikhtisar.tahunan.store";
-import { useIkhtisarTahunanLaporanStore } from "../../../../storage/ikhtisar.tahunan.tab.store";
+import { convertToRupiah } from "@helpers/object.formatter";
+import { bulanList } from "@service/bulan.list";
+import { useIkhtisarTahunanStore } from "@storage/ikhtisar.tahunan.store";
+import { useIkhtisarTahunanLaporanStore } from "@storage/ikhtisar.tahunan.tab.store";
 import { IIkhtisarPerTahun } from "../../ikhtisar.tahunan.column";
 
 const reduceJumlah = (page: IIkhtisarPerTahun[] | null, jnsLap: string) => {

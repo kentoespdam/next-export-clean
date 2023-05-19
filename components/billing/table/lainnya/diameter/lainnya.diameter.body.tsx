@@ -1,6 +1,6 @@
-import { useBillingStore } from "../../../../../storage/billing.store";
+import { useBillingStore } from "@storage/billing.store";
 import TableBody from "@mui/material/TableBody";
-import { cabangList } from "../../../../../service/cabang";
+import { cabangList } from "@service/cabang";
 import LainnyaDiameterRowGroupBuilder from "./lainnya.diameter.group.builder";
 
 const LainnyaDiameterBody = () => {

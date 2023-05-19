@@ -4,9 +4,9 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { AngsuranColumn, IAngsuran } from "./angsuran.column";
 import AngsuranToolbar from "./angsuran.toolbar";
-import { useAngsuranStore } from "../../storage/angsuran.store";
+import { useAngsuranStore } from "@storage/angsuran.store";
 import AngsuranFooter from "./angsuran.footer";
-import SessClientHandler from "../../app/SessClientHandler";
+import SessClientHandler from "@app/SessClientHandler";
 
 const AngsuranComponent = () => {
 	const store = useAngsuranStore();

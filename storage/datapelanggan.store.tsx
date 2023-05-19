@@ -1,6 +1,6 @@
 import create from "zustand";
 import { IDataPelangganRequest, IDataPelanggan } from "../components/datapelanggan/datapelanggan.column";
-import { IPages } from "../helpers/common.interface";
+import { IPages } from "@helpers/common.interface";
 
 interface IDataPelangganStore {
 	isLoading: boolean;

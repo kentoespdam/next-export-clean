@@ -1,5 +1,5 @@
 import { GridColDef } from "@mui/x-data-grid";
-import { IPageRequest } from "../../helpers/common.interface";
+import { IPageRequest } from "@helpers/common.interface";
 
 export type IAngsuranRequest = {
 	noreg?: string;

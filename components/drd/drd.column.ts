@@ -1,6 +1,6 @@
-import { IPageRequest, SelectType } from "../../helpers/common.interface";
+import { IPageRequest, SelectType } from "@helpers/common.interface";
 import { GridColDef } from "@mui/x-data-grid/models";
-import { convertToRupiah } from "../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 
 export type IDrdRequest = {
 	periode?: number;

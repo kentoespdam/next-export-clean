@@ -9,13 +9,13 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import { useEffect, useState } from "react";
-import { dataToBody, filterToRequest } from "../../helpers/fetch_helper";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
+import { dataToBody, filterToRequest } from "@helpers/fetch_helper";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
 import { useFilterDialogStore } from "../../storage/filter.dialog.store";
 import { useIkhtisarTahunanStore } from "../../storage/ikhtisar.tahunan.store";
-import FilterChip from "../template/filter/filter.chip";
-import FilterDialog from "../template/filter/filter.dialog";
-import Notif from "../template/notif";
+import FilterChip from "@template/filter/filter.chip";
+import FilterDialog from "@template/filter/filter.dialog";
+import Notif from "@template/notif";
 import { IkhtisarTahunanTypes } from "./ikhtisar.tahunan.column";
 
 const IkhtisarTahunanFilter = () => {

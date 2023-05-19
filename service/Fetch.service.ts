@@ -60,7 +60,7 @@ class FetchService {
 	public async requestGenerator(req: IFetchRequest) {
 		const option = this.optionGenerator(req);
 		const uri = this.uriGenerator(req);
-		if (req.externalApi === true) console.log(uri);
+		// if (req.externalApi === true) console.log(uri);
 		const request = await fetch(uri, option);
 		return request;
 	}

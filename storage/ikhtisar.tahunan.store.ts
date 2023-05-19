@@ -3,7 +3,7 @@ import {
 	IIkhtisarPerTahun,
 	IIkhtisarTahunanRequest,
 } from "../components/ikhtisartahunan/ikhtisar.tahunan.column";
-import { dateToStringFormat } from "../helpers/object.formatter";
+import { dateToStringFormat } from "@helpers/object.formatter";
 
 interface IIkhitsarTahunanStore {
 	isLoading: boolean;

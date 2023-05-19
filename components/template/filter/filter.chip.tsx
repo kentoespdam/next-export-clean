@@ -1,8 +1,9 @@
 import Chip from "@mui/material/Chip";
 import Grid from "@mui/material/Grid";
 import shallow from "zustand/shallow";
-import { SelectType } from "../../../helpers/common.interface";
-import { useFilterDialogStore } from "../../../storage/filter.dialog.store";
+// import { SelectType } from "@helpers/common.interface";
+import { SelectType } from "@helpers/common.interface";
+import { useFilterDialogStore } from "@storage/filter.dialog.store";
 
 interface ChipComponentProps {
 	id: string;

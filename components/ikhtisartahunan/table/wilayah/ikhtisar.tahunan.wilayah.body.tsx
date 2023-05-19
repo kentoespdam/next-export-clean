@@ -1,6 +1,6 @@
 import TableBody from "@mui/material/TableBody";
-import { cabangList } from "../../../../service/cabang";
-import { useIkhtisarTahunanStore } from "../../../../storage/ikhtisar.tahunan.store";
+import { cabangList } from "@service/cabang";
+import { useIkhtisarTahunanStore } from "@storage/ikhtisar.tahunan.store";
 import { IkhtisarTahunanWilayahBodyBuilder } from "./Ikhtisar.tahunan.wilayah.body.builder";
 
 const IkhtisarTahunanWilayahBody = () => {

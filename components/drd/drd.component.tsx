@@ -2,7 +2,7 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import { DataGrid } from "@mui/x-data-grid/DataGrid";
-import SessClientHandler from "../../app/SessClientHandler";
+import SessClientHandler from "@app/SessClientHandler";
 import { useDrdStore } from "../../storage/drd.store";
 import { DrdColumn } from "./drd.column";
 import DrdToolbar from "./drd.toolbar";

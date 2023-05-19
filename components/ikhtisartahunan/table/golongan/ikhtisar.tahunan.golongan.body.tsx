@@ -1,6 +1,6 @@
 import TableBody from "@mui/material/TableBody";
-import { useIkhtisarTahunanStore } from "../../../../storage/ikhtisar.tahunan.store";
-import { golonganList } from "../../../../service/golongan";
+import { useIkhtisarTahunanStore } from "@storage/ikhtisar.tahunan.store";
+import { golonganList } from "@service/golongan";
 import IkhtisarTahunanGolonganBodyBuilder from "./ikhtisar.tahunan.golongan.body.builder";
 
 const IkhtisarTahunanGolonganBody = () => {

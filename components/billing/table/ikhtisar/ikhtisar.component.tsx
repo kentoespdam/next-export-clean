@@ -4,7 +4,7 @@ import StripedTableStyle from "../striped.table.style";
 import IkhtisarFooter from "./ikhtisar.footer";
 import IkhtisarHead from "./ikhtisar.head";
 import IkhtisarGolonganBody from "./golongan/ikhtisar.golongan.body";
-import { useIkhtisarTabStore } from "../../../../storage/billing.tab.store";
+import { useIkhtisarTabStore } from "@storage/billing.tab.store";
 import IkhtisarWilayahBody from "./wilayah/ikhtisar.wilayah.body";
 import IkhtisarSatkerBody from "./satker/ikhtisar.satker.body";
 

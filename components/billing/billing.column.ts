@@ -5,7 +5,7 @@ import { ISatkerUkmetData } from "./interface/satker.ukmet.data";
 import { IUnitData } from "./interface/unit.data";
 import { IUnitGolonganData } from "./interface/unit.golongan.data";
 import { IUnitUkmetData } from "./interface/unit.ukmet.data";
-import { SelectType } from "../../helpers/common.interface";
+import { SelectType } from "@helpers/common.interface";
 
 export type IBillingRequest = {
 	tglBukti: string;

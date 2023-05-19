@@ -1,5 +1,5 @@
 import TableBody from "@mui/material/TableBody";
-import { useBillingStore } from "../../../../../storage/billing.store";
+import { useBillingStore } from "@storage/billing.store";
 import IkhtisarGolonganKelompokBuilder from "./ikhtisar.golongan.kelompok.builder";
 
 const IkhtisarGolonganBody = () => {

@@ -3,7 +3,7 @@ import {
 	IAngsuran,
 	IAngsuranRequest,
 } from "../components/angsuran/angsuran.column";
-import { IPages } from "../helpers/common.interface";
+import { IPages } from "@helpers/common.interface";
 
 interface IAngsuranStore {
 	isLoading: boolean;

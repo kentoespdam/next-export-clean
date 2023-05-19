@@ -1,7 +1,7 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
-import { useLainnyaJenisLaporanStore } from "../../../../../storage/billing.tab.store";
+import { convertToRupiah } from "@helpers/object.formatter";
+import { useLainnyaJenisLaporanStore } from "@storage/billing.tab.store";
 import { IUkmetData } from "../../../interface/ukmet.data";
 import { IUnitUkmetData } from "../../../interface/unit.ukmet.data";
 

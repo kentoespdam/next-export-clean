@@ -1,5 +1,5 @@
 import { GridColDef, GridValueFormatterParams } from "@mui/x-data-grid/";
-import { convertToRupiah } from "../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 
 export interface IPendapatan {
 	kodeGolongan: string;

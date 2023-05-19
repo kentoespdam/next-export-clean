@@ -5,9 +5,9 @@ import {
 	requestToken,
 	logout,
 	requestIntrospect,
-} from "../../../helpers/keycloak.helper";
+} from "@helpers/keycloak.helper";
 import { redirect } from "next/navigation";
-import { requestNewToken } from "../../../helpers/keycloak.helper";
+import { requestNewToken } from "@helpers/keycloak.helper";
 
 export const authOptions: NextAuthOptions = {
 	providers: [

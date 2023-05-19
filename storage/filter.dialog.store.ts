@@ -1,5 +1,5 @@
 import create from "zustand";
-import { SelectType } from "../helpers/common.interface";
+import { SelectType } from "@helpers/common.interface";
 interface IFilterDialog {
 	title: string;
 	isOpen: boolean;

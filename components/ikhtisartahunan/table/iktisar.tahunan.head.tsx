@@ -1,8 +1,8 @@
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { bulanList } from "../../../service/bulan.list";
-import { useIkhtisarTahunanLaporanStore } from "../../../storage/ikhtisar.tahunan.tab.store";
+import { bulanList } from "@service/bulan.list";
+import { useIkhtisarTahunanLaporanStore } from "@storage/ikhtisar.tahunan.tab.store";
 
 const IkhtisarTahunanHead = ({ berdasar }: { berdasar: string }) => {
 	const jnsLap = useIkhtisarTahunanLaporanStore((state) => state.jnsLap);

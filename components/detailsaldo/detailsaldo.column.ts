@@ -1,4 +1,4 @@
-import { IPageRequest } from "../../helpers/common.interface";
+import { IPageRequest } from "@helpers/common.interface";
 import { GridColDef } from "@mui/x-data-grid/models";
 
 export type IDetailSaldoRequest = {

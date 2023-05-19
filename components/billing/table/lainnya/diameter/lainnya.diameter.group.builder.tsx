@@ -1,6 +1,6 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { ICabang } from "../../../../../service/cabang";
+import { ICabang } from "@service/cabang";
 import { IUnitUkmetData } from "../../../interface/unit.ukmet.data";
 import LainnyaDiameterRowBuilder from "./lainnya.diameter.row.builder";
 

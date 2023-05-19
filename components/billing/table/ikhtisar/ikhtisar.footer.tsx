@@ -2,9 +2,9 @@ import TableCell from "@mui/material/TableCell";
 import TableFooter from "@mui/material/TableFooter";
 import TableRow from "@mui/material/TableRow";
 import { IBaseDrd } from "../../interface/base.drd";
-import { useBillingStore } from "../../../../storage/billing.store";
+import { useBillingStore } from "@storage/billing.store";
 import { IUnitData } from "../../interface/unit.data";
-import { convertToRupiah } from "../../../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 
 const totalReducer = (result: IBaseDrd, row: IBaseDrd) => {
 	result.totRekening += row.totRekening;

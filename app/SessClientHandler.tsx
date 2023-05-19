@@ -1,7 +1,7 @@
 "use client";
 import { Session } from "next-auth";
 import { useSession, signIn, signOut } from "next-auth/react";
-import { MyToken } from "../helpers/keycloak.helper";
+import { MyToken } from "@helpers/keycloak.helper";
 import { IChildrenNode } from "./layout";
 
 interface ICusSess extends Session {

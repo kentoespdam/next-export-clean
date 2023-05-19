@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import { useIkhtisarTabStore } from "../../../storage/billing.tab.store";
+import { useIkhtisarTabStore } from "@storage/billing.tab.store";
 import IkhtisarComponent from "../table/ikhtisar/ikhtisar.component";
 
 const BillingTabIkhtisar = () => {

@@ -3,8 +3,8 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import Box from "@mui/material/Box";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import IconButton from "@mui/material/IconButton";
-import { dataToBody } from "../../helpers/fetch_helper";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
+import { dataToBody } from "@helpers/fetch_helper";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
 import { useRekairStore } from "../../storage/rekair.store";
 
 const RekairFooter = () => {

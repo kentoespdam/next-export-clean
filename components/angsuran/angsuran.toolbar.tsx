@@ -8,14 +8,14 @@ import LoopOutlined from "@mui/icons-material/LoopOutlined";
 import DownloadOutlined from "@mui/icons-material/DownloadOutlined";
 import TuneOutlined from "@mui/icons-material/TuneOutlined";
 import { useFilterDialogStore } from "../../storage/filter.dialog.store";
-import { SelectType, IPages } from "../../helpers/common.interface";
+import { SelectType, IPages } from "@helpers/common.interface";
 import { useEffect } from "react";
-import FilterChip from "../template/filter/filter.chip";
-import FilterDialog from "../template/filter/filter.dialog";
+import FilterChip from "@template/filter/filter.chip";
+import FilterDialog from "@template/filter/filter.dialog";
 import { IAngsuran, IAngsuranRequest } from "./angsuran.column";
-import { useAngsuranStore } from "../../storage/angsuran.store";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
-import { dataToBody, filterToRequest } from "../../helpers/fetch_helper";
+import { useAngsuranStore } from "@storage/angsuran.store";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
+import { dataToBody, filterToRequest } from "@helpers/fetch_helper";
 
 const angsuranSelectTypes: SelectType[] = [
 	{ id: "noreg", label: "No. Registrasi", type: "text" },

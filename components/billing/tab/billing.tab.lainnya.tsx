@@ -2,7 +2,7 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
-import { useLainnyaStore } from "../../../storage/billing.tab.store";
+import { useLainnyaStore } from "@storage/billing.tab.store";
 import LainnyaComponent from "../table/lainnya/lainnya.component";
 
 const BillingTabLainnya = () => {

@@ -12,7 +12,7 @@ import Checkbox from "@mui/material/Checkbox";
 import Button from "@mui/material/Button";
 import LockOutlined from "@mui/icons-material/LockOutlined";
 import { useRouter } from "next/navigation";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
 
 const Login = () => {
 	const theme = useRootStore((state) => state.theme);

@@ -18,8 +18,23 @@
 			{
 				"name": "next"
 			}
-		]
+		],
+		"baseUrl": ".",
+		"paths": {
+			"@app/*": ["./app/*"],
+			"@helpers/*": ["./helpers/*"],
+			"@storage/*": ["./storage/*"],
+            "@service/*":["./service/*"],
+			"@template/*": ["./components/template/*"]
+		}
 	},
-	"include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "middleware.ts.bak", "pages/api/auth/old/[...nextauth].ts.kc"],
+	"include": [
+		"next-env.d.ts",
+		"**/*.ts",
+		"**/*.tsx",
+		".next/types/**/*.ts",
+		"middleware.ts.bak",
+		"pages/api/auth/old/[...nextauth].ts.kc"
+	],
 	"exclude": ["node_modules"]
 }

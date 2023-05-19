@@ -1,4 +1,4 @@
-import { SelectType } from "../../helpers/common.interface";
+import { SelectType } from "@helpers/common.interface";
 
 export type IIkhtisarTahunanRequest = {
 	toBulan: number;

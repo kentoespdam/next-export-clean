@@ -1,8 +1,8 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
-import { golonganList } from "../../../../../service/golongan";
-import { useLainnyaJenisLaporanStore } from "../../../../../storage/billing.tab.store";
+import { convertToRupiah } from "@helpers/object.formatter";
+import { golonganList } from "@service/golongan";
+import { useLainnyaJenisLaporanStore } from "@storage/billing.tab.store";
 import { IGolonganData } from "../../../interface/golongan.data";
 import { IUnitGolonganData } from "../../../interface/unit.golongan.data";
 

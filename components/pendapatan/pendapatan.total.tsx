@@ -2,7 +2,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import Divider from "@mui/material/Divider";
-import { convertToRupiah } from "../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 import { usePendapatanStore } from "../../storage/pendapatan.store";
 import { IPendapatan } from "./pendapatan.column";
 

@@ -1,8 +1,8 @@
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
-import { useBillingStore } from "../../../../../storage/billing.store";
+import { convertToRupiah } from "@helpers/object.formatter";
+import { useBillingStore } from "@storage/billing.store";
 
 const IkhtisarSatkerBody = () => {
 	const rows = useBillingStore((state) => state.page?.satkerDataList);

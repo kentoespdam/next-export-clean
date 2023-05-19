@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { pipeline } from "../../../helpers/pipeline.helper";
-import FetchService, { EReqMethod } from "../../../service/Fetch.service";
+import { pipeline } from "@helpers/pipeline.helper";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 	const query = new URLSearchParams(req.body).toString();

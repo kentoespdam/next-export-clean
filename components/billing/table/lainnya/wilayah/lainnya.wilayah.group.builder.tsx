@@ -1,6 +1,6 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { ICabang } from "../../../../../service/cabang";
+import { ICabang } from "@service/cabang";
 import { IUnitGolonganData } from "../../../interface/unit.golongan.data";
 import LainnyaWilayahRowBuilder from "./lainnya.wilayah.row.builder";
 

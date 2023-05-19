@@ -2,9 +2,9 @@ import TableCell from "@mui/material/TableCell";
 import TableFooter from "@mui/material/TableFooter";
 import TableRow from "@mui/material/TableRow";
 import { IUnitUkmetData } from "../../../interface/unit.ukmet.data";
-import { useBillingStore } from "../../../../../storage/billing.store";
-import { useLainnyaJenisLaporanStore } from "../../../../../storage/billing.tab.store";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
+import { useBillingStore } from "@storage/billing.store";
+import { useLainnyaJenisLaporanStore } from "@storage/billing.tab.store";
+import { convertToRupiah } from "@helpers/object.formatter";
 
 const reduceTotal = (rows: IUnitUkmetData[], ukmet: string, jnsLap: string) => {
 	return rows.reduce((result, row) => {

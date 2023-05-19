@@ -7,13 +7,13 @@ import Grid from "@mui/material/Grid";
 import Typography from "@mui/material/Typography";
 import { GridToolbarContainer } from "@mui/x-data-grid";
 import { useEffect } from "react";
-import { SelectType } from "../../helpers/common.interface";
-import { filterToRequest, dataToBody } from "../../helpers/fetch_helper";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
+import { SelectType } from "@helpers/common.interface";
+import { filterToRequest, dataToBody } from "@helpers/fetch_helper";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
 import { useDataPelangganStore } from "../../storage/datapelanggan.store";
 import { useFilterDialogStore } from "../../storage/filter.dialog.store";
-import FilterChip from "../template/filter/filter.chip";
-import FilterDialog from "../template/filter/filter.dialog";
+import FilterChip from "@template/filter/filter.chip";
+import FilterDialog from "@template/filter/filter.dialog";
 
 const dataPelangganSelectType: SelectType[] = [
 	{ id: "noreg", label: "No. Registrasi", type: "text" },

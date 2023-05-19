@@ -3,10 +3,10 @@ import ArrowForward from "@mui/icons-material/ArrowForward";
 import Box from "@mui/material/Box";
 import ButtonGroup from "@mui/material/ButtonGroup";
 import IconButton from "@mui/material/IconButton";
-import FetchService, { EReqMethod } from "../../service/Fetch.service";
-import { useAngsuranStore } from "../../storage/angsuran.store";
-import { dataToBody } from "../../helpers/fetch_helper";
-import { IPages } from "../../helpers/common.interface";
+import FetchService, { EReqMethod } from "@service/Fetch.service";
+import { useAngsuranStore } from "@storage/angsuran.store";
+import { dataToBody } from "@helpers/fetch_helper";
+import { IPages } from "@helpers/common.interface";
 import { IAngsuran } from "./angsuran.column";
 
 const AngsuranFooter = () => {

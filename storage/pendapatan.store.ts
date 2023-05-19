@@ -2,7 +2,7 @@ import dayjs, { Dayjs } from "dayjs";
 import { IPendapatan } from "../components/pendapatan/pendapatan.column";
 import create from "zustand";
 import { devtools } from "zustand/middleware";
-import periodeHelper from "../helpers/periode.helper";
+import periodeHelper from "@helpers/periode.helper";
 
 export interface IPendapatanRequest {
 	fromPeriode: string;

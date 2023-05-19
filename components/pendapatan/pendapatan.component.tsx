@@ -7,7 +7,7 @@ import { IPendapatan, PendapatanColumn } from "./pendapatan.column";
 import PendapatanToolbar from "./pendapatan.toolbar";
 import PendapatanTotal from "./pendapatan.total";
 import shallow from "zustand/shallow";
-import SessClientHandler from "../../app/SessClientHandler";
+import SessClientHandler from "@app/SessClientHandler";
 
 const PendapatanComponent = () => {
 	const isLoading = usePendapatanStore((state) => state.isLoading, shallow);

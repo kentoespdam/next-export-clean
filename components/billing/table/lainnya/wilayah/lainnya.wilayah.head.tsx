@@ -1,8 +1,8 @@
 import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
-import { useBillingStore } from "../../../../../storage/billing.store";
-import { golonganList } from "../../../../../service/golongan";
+import { useBillingStore } from "@storage/billing.store";
+import { golonganList } from "@service/golongan";
 
 const LainnyaWilayahHead = () => {
 	const rows = useBillingStore((state) => state.page?.unitGolonganDataList);

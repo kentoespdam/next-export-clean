@@ -1,6 +1,6 @@
 import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
-import { convertToRupiah } from "../../../../../helpers/object.formatter";
+import { convertToRupiah } from "@helpers/object.formatter";
 import { IGolonganData } from "../../../interface/golongan.data";
 
 type KonsolidasiRowBuilderProps = {

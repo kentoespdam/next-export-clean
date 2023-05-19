@@ -3,7 +3,7 @@ import {
 	IDetailSaldo,
 	IDetailSaldoRequest,
 } from "../components/detailsaldo/detailsaldo.column";
-import { IPages } from "../helpers/common.interface";
+import { IPages } from "@helpers/common.interface";
 
 interface IDetailSaldoStore {
 	isLoading: boolean;

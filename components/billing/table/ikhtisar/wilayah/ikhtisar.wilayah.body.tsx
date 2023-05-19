@@ -3,8 +3,8 @@ import TableCell from "@mui/material/TableCell";
 import TableRow from "@mui/material/TableRow";
 import { IUnitData } from "../../../interface/unit.data";
 import IkhtisarWilayahRowBuilder from "./ikhtisar.wilayah.row.builder";
-import { useBillingStore } from "../../../../../storage/billing.store";
-import { cabangList, ICabang } from "../../../../../service/cabang";
+import { useBillingStore } from "@storage/billing.store";
+import { cabangList, ICabang } from "@service/cabang";
 
 type RowGroupBuilderProps = {
 	satker: ICabang;
