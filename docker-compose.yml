@@ -1,0 +1,21 @@
+version: "3.4"
+
+services:
+  web:
+    image: export-excel:1.0
+    build:
+      context: ./export-excel
+      dockerfile: Dockerfile
+    ports:
+      - 3001:3001
+    # hostname: export.tirtasatria.tech
+    networks:
+      - back-tier
+    entrypoint:
+      - yarn
+      - build
+
+networks:
+  back-tier:
+    external: true
+

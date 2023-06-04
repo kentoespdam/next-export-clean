@@ -33,11 +33,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
-next-env.d.ts
 .env.local.ori
 .env.production
-docker-compose.production.yml
-docker-compose.yml
-Dockerfile
 .gitignore
-Dockerfile.production
