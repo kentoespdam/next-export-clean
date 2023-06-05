@@ -3,7 +3,7 @@ import { IPageRequest } from "@helpers/common.interface";
 
 export interface IDataPelanggan {
 	noreg: string;
-	wil: string;
+	wilayah: string;
 	nosamw: string;
 	nama: string;
 	alamat: string;
@@ -11,11 +11,11 @@ export interface IDataPelanggan {
 	rw: string;
 	desa: string;
 	kecamatan: string;
-	jlw: string;
-	urjlwp: string;
-	statSmb: string;
-	urstatSmb: string;
-	tglPas: string;
+	kodeGolongan: string;
+	golongan: string;
+	kodeStatusSambung: string;
+	statusSambung: string;
+	tanggalPasang: string;
 }
 
 export type IDataPelangganRequest = {
@@ -30,7 +30,7 @@ export type IDataPelangganRequest = {
 
 export const DataPelangganColumn: GridColDef[] = [
 	{
-		field: "wil",
+		field: "wilayah",
 		headerName: "kode wilayah",
 		filterable: false,
 		sortable: false,
@@ -84,35 +84,35 @@ export const DataPelangganColumn: GridColDef[] = [
 		width: 200,
 	},
 	{
-		field: "jlw",
+		field: "kodeGolongan",
 		headerName: "Jlw",
 		filterable: false,
 		sortable: false,
 		width: 40,
 	},
 	{
-		field: "urjlwp",
+		field: "golongan",
 		headerName: "Urjlwp",
 		filterable: false,
 		sortable: false,
 		width: 150,
 	},
 	{
-		field: "statSmb",
+		field: "kodeStatusSambung",
 		headerName: "stat Smb",
 		filterable: false,
 		sortable: false,
 		width: 80,
 	},
 	{
-		field: "urstatSmb",
+		field: "statusSambung",
 		headerName: "status Sambungan",
 		filterable: false,
 		sortable: false,
 		width: 150,
 	},
 	{
-		field: "tglPas",
+		field: "tanggalPasang",
 		headerName: "Tgl Pasang",
 		filterable: false,
 		sortable: false,
